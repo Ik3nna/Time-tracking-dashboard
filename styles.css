@@ -1,0 +1,409 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --blue: hsl(246, 80%, 60%);
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --exercise: hsl(145, 58%, 55%);
+    --social: hsl(264, 64%, 52%);
+    --selfCare: hsl(43, 84%, 65%);
+    --veryDarkBlue: hsl(226, 43%, 10%);
+    --darkBlue: hsl(235, 46%, 20%);
+    --desaturatedBlue: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+    --white: hsl(0, 0%, 100%);
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    background-color: var(--veryDarkBlue);
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    padding: 20px;
+    gap: 15px;
+}
+
+/* Start of report */
+.report {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: var(--darkBlue);
+    width: 250px;
+    border-radius: 20px;
+}
+.jeremy {
+    background-color: var(--blue);
+    border-radius: 20px;
+    width: 250px;
+    height: 300px;
+    padding: 20px;
+}
+.jeremy img {
+    width: 50%;
+    margin-bottom: 30px;
+}
+.jeremy p {
+    font-size: 14px;
+    color: var(--paleBlue);
+    margin-bottom: 5px;
+}
+.jeremy div {
+    color: var(--white);
+    font-size: 30px;
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+.switch {
+   padding: 20px; 
+   text-transform: capitalize;
+   cursor: pointer;
+   width: 50px;
+}
+.switch #daily:hover, .switch #monthly:hover {
+    color: var(--white);
+}
+.switch div {
+    margin-bottom: 10px;
+}
+
+.color {
+    color: var(--white);
+}
+.nocolor:hover {
+    color: var(--white);
+}
+
+/* End of report */
+
+
+.work {
+    background-color: var(--work);
+    border-radius: 20px;
+    height: 200px;
+    cursor: pointer;
+}
+.work:hover {
+    opacity: .8;
+}
+.img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 50px;
+}
+.img img {
+    float: right;
+    width: 30%;
+}
+.sub {
+    background-color: var(--darkBlue);
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 3px var(--darkBlue);
+    height: 152px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+.sub p {
+    text-transform: capitalize;
+    font-size: 18px;
+    color: var(--white);
+}
+.sub p span {
+    float: right;
+}
+.sub p span img {
+    width: 70%;
+}
+.sub .hrs {
+    margin-top: 20px;
+    color: var(--white);
+    font-size: 30px;
+}
+.sub .previous {
+    margin-top: 20px;
+    color: var(--paleBlue);
+    font-size: 14px;
+}
+.play {
+    background-color: var(--play);
+    border-radius: 20px;
+    height: 200px;
+    cursor: pointer;
+}
+.play:hover {
+    opacity: .8;
+}
+.study {
+    background-color: var(--study);
+    border-radius: 20px;
+    height: 200px;
+    cursor: pointer;
+}
+.study:hover {
+    opacity: .8;
+}
+.exercise {
+    background-color: var(--exercise);
+    border-radius: 20px;
+    height: 200px;
+    cursor: pointer;
+}
+.exercise:hover {
+    opacity: .8;
+}
+.social {
+    background-color: var(--social);
+    border-radius: 20px;
+    height: 200px;
+    cursor: pointer;
+}
+.social:hover {
+    opacity: .8;
+}
+.selfcare {
+    background-color: var(--selfCare);
+    border-radius: 20px;
+    height: 200px;
+    cursor: pointer;
+}
+.selfcare:hover {
+    opacity: .8;
+}
+
+
+
+@media (min-width: 1400px) {
+    .report {
+        width: 270px;
+        border-radius: 20px;
+    }
+    .jeremy {
+        width: 270px;
+    }
+    .jeremy div {
+        width: 100px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .report {
+        width: 230px;
+        border-radius: 20px;
+    }
+    .jeremy {
+        width: 230px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .report {
+        width: 200px;
+        border-radius: 20px;
+    }
+    .jeremy {
+        width: 200px;
+    }
+    .sub .previous {
+        font-size: 12px;
+    }
+    .exercise p {
+        font-size: 16px;
+    }
+    .selfcare p {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .selfcare .hrs {
+        margin-top: 25px;
+        color: var(--white);
+        font-size: 30px;
+    }
+    .selfcare .previous {
+        margin-top: 20px;
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        row-gap: 30px;
+        margin-top: -140px;
+    }
+    .report {
+        width: 100%;
+        margin-bottom: -170px;
+    }
+    .jeremy {
+        background-color: var(--blue);
+        border-radius: 20px;
+        width: 100%;
+        height: 200px;
+        padding: 20px;
+        position: relative;
+    }
+    .jeremy img {
+        width: 150px;
+    }
+    .jeremy p {
+        font-size: 14px;
+        color: var(--paleBlue);
+        position: absolute;
+        top: 60px;
+        left: 180px;
+    }
+    .jeremy div {
+        color: var(--white);
+        font-size: 25px;
+        text-transform: capitalize;
+        line-height: 1;
+        position: absolute;
+        top: 80px;
+        left: 180px;
+    }
+    .switch {
+       display: flex;
+       justify-content: space-evenly;
+       align-items: center;
+       padding: 20px; 
+       text-transform: capitalize;
+       cursor: pointer;
+       width: 100%;
+    }
+    .img img {
+        float: right;
+        width: 15%;
+    }
+    .sub p span img {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        width: 20px;
+    }
+}
+@media (min-width: 301px) and (max-width: 480px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        row-gap: 30px;
+        margin-top: -200px;
+    }
+    .report {
+        width: 100%;
+        margin-bottom: -220px;
+    }
+    .jeremy {
+        background-color: var(--blue);
+        border-radius: 20px;
+        width: 100%;
+        height: 150px;
+        padding: 20px;
+        position: relative;
+    }
+    .jeremy img {
+        width: 100px;
+    }
+    .jeremy p {
+        font-size: 14px;
+        color: var(--paleBlue);
+        position: absolute;
+        top: 45px;
+        left: 127px;
+    }
+    .jeremy div {
+        color: var(--white);
+        font-size: 20px;
+        text-transform: capitalize;
+        line-height: 1;
+        position: absolute;
+        top: 65px;
+        left: 127px;
+    }
+    .switch {
+       display: flex;
+       justify-content: space-evenly;
+       align-items: center;
+       padding: 20px; 
+       text-transform: capitalize;
+       cursor: pointer;
+       width: 100%;
+    }
+    .img img {
+        float: right;
+        width: 20%;
+    }
+    .sub p span img {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        width: 20px;
+    }
+}
+@media (max-width: 300px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        row-gap: 30px;
+        margin-top: -200px;
+    }
+    .report {
+        width: 100%;
+        margin-bottom: -220px;
+    }
+    .jeremy {
+        background-color: var(--blue);
+        border-radius: 20px;
+        width: 100%;
+        height: 150px;
+        padding: 20px;
+        position: relative;
+    }
+    .jeremy img {
+        width: 80px;
+    }
+    .jeremy p {
+        font-size: 14px;
+        color: var(--paleBlue);
+        position: absolute;
+        top: 40px;
+        left: 110px;
+    }
+    .jeremy div {
+        color: var(--white);
+        font-size: 20px;
+        text-transform: capitalize;
+        line-height: 1;
+        position: absolute;
+        top: 60px;
+        left: 110px;
+    }
+    .switch {
+       display: flex;
+       justify-content: space-evenly;
+       align-items: center;
+       padding: 20px; 
+       text-transform: capitalize;
+       cursor: pointer;
+       width: 100%;
+    }
+    .img img {
+        float: right;
+        width: 30%;
+    }
+    .sub p span img {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        width: 20px;
+    }
+}
